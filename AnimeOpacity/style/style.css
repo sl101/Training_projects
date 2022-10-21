@@ -1,0 +1,51 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	padding: 15px;
+}
+
+img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.box__img {
+	cursor: pointer;
+	transition: transform 1s ease, opacity .7s ease;
+}
+
+.box__img--visible {
+	max-width: 250px;
+}
+
+.box__img--hidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+.box:hover .box__img--visible {
+	transform: rotate(720deg);
+	opacity: 0;
+}
+
+.box:hover .box__img--hidden {
+	transform: rotate(-720deg);
+	opacity: 1;
+}
